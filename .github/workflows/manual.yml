@@ -4,9 +4,11 @@ on:
   workflow_dispatch:
   
 jobs:
-  bash-example:
+  project-number:
     runs-on: ubuntu-latest
     steps:
-      - name: Group of log lines
+      - name: Checking the project number
         run: |
           echo "***** Start Project Number Validation *****"
+          curl https://gft.com
+          
