@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   
 jobs:
-  Project_Number:
-    name: check_project_number
-    runs-on: ubuntu-18.04
-    run: echo "***** Start Project Number Validation *****"
+  bash-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group of log lines
+        run: |
+            echo echo "***** Start Project Number Validation *****"
