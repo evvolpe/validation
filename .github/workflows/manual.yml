@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Group of log lines
         run: |
-            echo echo "***** Start Project Number Validation *****"
+          echo "***** Start Project Number Validation *****"
