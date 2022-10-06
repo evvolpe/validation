@@ -1,0 +1,10 @@
+name: Ticket data validation
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  Project_Number:
+    name: check_project_number
+    runs-on: ubuntu-18.04
+    run: echo "***** Start Project Number Validation *****"
