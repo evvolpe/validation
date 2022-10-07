@@ -13,10 +13,22 @@ jobs:
         with:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           #project_id: ${{ secrets.GCP_PROJECT_ID }}
+      
+      # Check project ID
       - name: Checking the project number
         run: |
           echo "***** Start Project Number Validation *****"
           gcloud projects list --filter="project_number=901815459324"
           
+     # Check enabled APIs
+      - name: Checking the enabled api's
+        run: |
+          echo "***** Start Enabled APIs Validation *****"
+          gcloud services list --project winterfoxit-333200 --enabled
           
+    # Check service accounts
+      - name: Checking the service accounts
+        run: |
+          echo "***** Start SA Validation *****"
+          gcloud iam service-accounts list --project winterfoxit-333200
           
