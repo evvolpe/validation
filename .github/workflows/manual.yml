@@ -6,7 +6,13 @@ on:
 jobs:
   project-number:
     runs-on: ubuntu-latest
+    environment: hw-prod
     steps:
+      # Login to GCP
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          #project_id: ${{ secrets.GCP_PROJECT_ID }}
       - name: Checking the project number
         run: |
           echo "***** Start Project Number Validation *****"
