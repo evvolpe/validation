@@ -10,5 +10,7 @@ jobs:
       - name: Checking the project number
         run: |
           echo "***** Start Project Number Validation *****"
-          curl https://gft.com
+          gcloud projects list --filter="project_number=901815459324"
+          
+          
           
